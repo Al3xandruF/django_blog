@@ -12,9 +12,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
-
-import dj_database_url
 from django.contrib.messages import constants as messages
+import dj_database_url
 if os.path.isfile("env.py"):
     import env
 
@@ -32,10 +31,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
-
 ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost"]
 
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 # Application definition
 
@@ -46,14 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'django_summernote',
     'crispy_forms',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django_summernote',
     'blog',
 ]
 
@@ -69,10 +67,6 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
