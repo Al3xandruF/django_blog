@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["mb2test.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["django-blog-web-app.herokuapp.com", "localhost"]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -67,6 +67,8 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
